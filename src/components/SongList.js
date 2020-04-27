@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {v1 as uuidv1} from 'uuid';
 import NewSongForm from './NewSongForm';
 
@@ -11,6 +11,8 @@ const SongList = () => {
   const addSong = (title) => {
     setSongs([...songs, { title, id: uuidv1() }]);
   }
+  //useEffect works each time after the data updated.
+  useEffect(() => {})
   return ( 
     <div className="song-list">
       <ul>
